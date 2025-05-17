@@ -19,6 +19,26 @@ namespace UE
 		class ForElementType
 		{
 		public:
+			T* GetAllocation() const
+			{
+				return secondaryData.GetAllocation() ? secondaryData.GetAllocation() : GetInlineElements();
+			}
+
+			SizeType GetInitialCapacity() const
+			{
+				return N;
+			}
+
+			T* GetInlineElements() const
+			{
+				return (T*)inlineData;
+			}
+
+			bool HasAllocation() const
+			{
+				return secondaryData.HasAllocation();
+			}
+
 			// members
 			TTypeCompatibleBytes<T>                inlineData[N];  // 00
 			typename A::template ForElementType<T> secondaryData;  // ??
