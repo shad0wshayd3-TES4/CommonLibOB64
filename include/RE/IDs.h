@@ -12,6 +12,11 @@ namespace RE::ID
 		inline constexpr REL::ID FormEnumString{ 1462745 };
 	}
 
+	namespace GameCalendar
+	{
+		inline constexpr REL::ID Singleton{ 1669511 };
+	}
+
 	namespace GameSettingCollection
 	{
 		inline constexpr REL::ID Singleton{ 1464798 };
