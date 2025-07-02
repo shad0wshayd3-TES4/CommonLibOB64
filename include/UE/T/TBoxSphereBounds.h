@@ -14,4 +14,3 @@ namespace UE::Math
 		T2          sphereRadius;  // ???
 	};
 }
-
