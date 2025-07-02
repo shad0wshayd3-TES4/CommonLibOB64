@@ -46,15 +46,3 @@ namespace UE::Math
 		TPersistentVectorRegisterType<T> scale3D;
 	};
 }
-
-namespace UE
-{
-	using FTransform = Math::TTransform<double>;
-	static_assert(sizeof(FTransform) == 0x60);
-
-	using FTransform3d = Math::TTransform<double>;
-	static_assert(sizeof(FTransform) == 0x60);
-
-	using FTransform3f = Math::TTransform<float>;
-	static_assert(sizeof(FTransform) == 0x60);
-}

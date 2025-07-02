@@ -6,7 +6,7 @@
 #include "UE/F/FRepRootMotionMontage.h"
 #include "UE/F/FRootMotionMovementParams.h"
 #include "UE/F/FRootMotionSourceGroup.h"
-#include "UE/T/TQuat.h"
+#include "UE/F/FQuat.h"
 
 namespace UE
 {

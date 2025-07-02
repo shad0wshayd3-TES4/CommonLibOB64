@@ -3,9 +3,9 @@
 #include "UE/A/AActor.h"
 #include "UE/E/EAutoPossessAI.h"
 #include "UE/E/EAutoReceiveInput.h"
+#include "UE/F/FQuat.h"
 #include "UE/I/INavAgentInterface.h"
 #include "UE/T/TBaseDynamicMulticastDelegate.h"
-#include "UE/T/TQuat.h"
 #include "UE/T/TSparseDynamicDelegate.h"
 #include "UE/T/TSubclassOf.h"
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "UE/T/TRotator.h"
-#include "UE/T/TVector.h"
+#include "UE/F/FRotator.h"
+#include "UE/F/FVector.h"
 
 namespace UE
 {

@@ -97,6 +97,18 @@ namespace UE
 			return (classCastFlags & a_flag) == a_flag;
 		}
 
+	private:
+		UFunction* FindFunction(FName a_name) const
+		{
+			return UObject::FindFunction(a_name);
+		}
+
+		UFunction* FindFunctionChecked(FName a_name) const
+		{
+			return UObject::FindFunctionChecked(a_name);
+		}
+
+	public:
 		// members
 		std::uintptr_t                     classConstructor;             // 0B0
 		std::uintptr_t                     classVTableHelperCtorCaller;  // 0B8

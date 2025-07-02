@@ -147,6 +147,9 @@ namespace UE
 		virtual void                         SetNetPushIdDynamic(const std::uint64_t a_id);                                                      // 55
 		virtual std::uint64_t                GetNetPushIdDynamic() const;                                                                        // 56
 
+		UFunction* FindFunction(FName a_name) const;
+		UFunction* FindFunctionChecked(FName a_name) const;
+
 		FString GetDetailedInfo() const
 		{
 			return this ? GetDetailedInfoInternal() : L"None";

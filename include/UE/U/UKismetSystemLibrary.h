@@ -20,7 +20,7 @@ namespace UE
 			TPayload<decltype(GetGameName)> payload;
 
 			const auto cls = FindClass<CLASS>();
-			cls->ProcessEvent(cls->FindFunctionByName("GetGameName"), &payload);
+			cls->GetDefaultObject()->ProcessEvent(cls->FindFunctionByName("GetGameName"), &payload);
 			return payload.GetResult();
 		}
 
@@ -29,7 +29,7 @@ namespace UE
 			TPayload<decltype(GetObjectName)> payload{ a_object };
 
 			const auto cls = FindClass<CLASS>();
-			cls->ProcessEvent(cls->FindFunctionByName("GetObjectName"), &payload);
+			cls->GetDefaultObject()->ProcessEvent(cls->FindFunctionByName("GetObjectName"), &payload);
 			return payload.GetResult();
 		}
 
@@ -38,7 +38,7 @@ namespace UE
 			TPayload<decltype(GetPathName)> payload{ a_object };
 
 			const auto cls = FindClass<CLASS>();
-			cls->ProcessEvent(cls->FindFunctionByName("GetPathName"), &payload);
+			cls->GetDefaultObject()->ProcessEvent(cls->FindFunctionByName("GetPathName"), &payload);
 			return payload.GetResult();
 		}
 	};

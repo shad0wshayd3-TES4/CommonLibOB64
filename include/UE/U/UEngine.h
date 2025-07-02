@@ -2,6 +2,7 @@
 
 #include "UE/E/EDynamicResolutionStateEvent.h"
 #include "UE/E/EFrameHitchType.h"
+#include "UE/E/ERHIFeatureLevel.h"
 #include "UE/E/ETransitionType.h"
 #include "UE/F/FAudioDeviceHandle.h"
 #include "UE/F/FColor.h"
@@ -30,11 +31,6 @@ namespace UE
 	}
 
 	namespace ENetworkLagState
-	{
-		enum class Type : std::int32_t;
-	}
-
-	namespace ERHIFeatureLevel
 	{
 		enum class Type : std::int32_t;
 	}
@@ -145,7 +141,7 @@ namespace UE
 		virtual void                   WorldAdded(UWorld*);                                                                   // 57
 		virtual void                   WorldDestroyed(UWorld*);                                                               // 58
 		virtual bool                   IsInitialized();                                                                       // 59
-		virtual ERHIFeatureLevel::Type GetDefaultWorldFeatureLevel();                                                         // 5A
+		virtual ERHIFeatureLevel       GetDefaultWorldFeatureLevel();                                                         // 5A
 		virtual void                   Init(IEngineLoop*);                                                                    // 5B
 		virtual void                   Start();                                                                               // 5C
 		virtual void                   PreExit();                                                                             // 5D

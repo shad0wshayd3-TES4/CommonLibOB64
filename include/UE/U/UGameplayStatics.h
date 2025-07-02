@@ -29,7 +29,7 @@ namespace UE
 			TPayload<decltype(BeginDeferredActorSpawnFromClass)> payload{ a_object, a_class, a_transform, a_collision, a_owner, a_scale };
 
 			const auto cls = FindClass<CLASS>();
-			cls->ProcessEvent(cls->FindFunctionByName("BeginDeferredActorSpawnFromClass"), &payload);
+			cls->GetDefaultObject()->ProcessEvent(cls->FindFunctionByName("BeginDeferredActorSpawnFromClass"), &payload);
 			return payload.GetResult();
 		}
 
@@ -38,7 +38,7 @@ namespace UE
 			TPayload<decltype(FinishSpawningActor)> payload{ a_actor, a_transform, a_scale };
 
 			const auto cls = FindClass<CLASS>();
-			cls->ProcessEvent(cls->FindFunctionByName("FinishSpawningActor"), &payload);
+			cls->GetDefaultObject()->ProcessEvent(cls->FindFunctionByName("FinishSpawningActor"), &payload);
 			return payload.GetResult();
 		}
 	};

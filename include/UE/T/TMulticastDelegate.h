@@ -23,4 +23,6 @@ namespace UE
 	public:
 		using InvocationListType = Policy::FMulticastDelegateExtras::InvocationListType;
 	};
+
+	using FSimpleMulticastDelegate = TMulticastDelegate<void(void)>;
 }

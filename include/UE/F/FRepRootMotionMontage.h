@@ -2,9 +2,9 @@
 
 #include "UE/F/FName.h"
 #include "UE/F/FRootMotionSourceGroup.h"
+#include "UE/F/FRotator.h"
 #include "UE/F/FVector_NetQuantize.h"
 #include "UE/T/TObjectPtr.h"
-#include "UE/T/TRotator.h"
 
 namespace UE
 {
